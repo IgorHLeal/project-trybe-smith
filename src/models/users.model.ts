@@ -3,7 +3,8 @@ import connection from './connection';
 import IUser from '../interfaces/users.interface';
 
 const UsersModel = {
-  create: async ({ username, classe, level, password }: IUser): Promise<number> => {
+  create: async (user: IUser): Promise<number> => {
+    const { username, classe, level, password } = user;
     const query = `INSERT INTO Trybesmith.Users (username, classe, level, password)
       VALUES (?, ?, ?, ?)`;
 
