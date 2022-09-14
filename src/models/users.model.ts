@@ -1,5 +1,5 @@
 import { ResultSetHeader } from 'mysql2';
-import connection from './connection'
+import connection from './connection';
 import IUser from '../interfaces/users.interface';
 
 const UsersModel = {
